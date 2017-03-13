@@ -37,4 +37,4 @@ if __name__ == "__main__":
     elif re.match(r'^\d{4}-\d{1,2}-\d{1,2}', sys.argv[1]):
         strptime_2_timestamp()
     else:
-        print '时间戳格式：1-10位数字\\n日期时间字符串格式：Y-m-d H:M:S'
+        print '时间戳格式：1-10位数字\n日期时间字符串格式：Y-m-d H:M:S'
