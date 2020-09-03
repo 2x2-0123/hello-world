@@ -22,6 +22,7 @@ class Consumer(Process):
             print('Consumer pop an element')
             time.sleep(1)
             lock.release()
+            empty.release()
 
 
 class Producer(Process):
