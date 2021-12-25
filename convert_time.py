@@ -19,7 +19,7 @@ def strptime_2_timestamp():
     a = sys.argv[1]
     timeArray = time.strptime(a, "%Y-%m-%d %H:%M:%S")
     timeStamp = int(time.mktime(timeArray))
-    print timeStamp
+    print(timeStamp)
 
 def timestamp_2_strptime():
     '''
@@ -29,7 +29,7 @@ def timestamp_2_strptime():
     timeStamp = sys.argv[1]
     timeArray = time.localtime(float(timeStamp))
     otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
-    print otherStyleTime
+    print(otherStyleTime)
     
 if __name__ == "__main__":
     if re.match(r'^\d{10}$', sys.argv[1]):
@@ -37,4 +37,4 @@ if __name__ == "__main__":
     elif re.match(r'^\d{4}-\d{1,2}-\d{1,2}', sys.argv[1]):
         strptime_2_timestamp()
     else:
-        print '时间戳格式：1-10位数字\n日期时间字符串格式：Y-m-d H:M:S'
+        print('时间戳格式：1-10位数字\n日期时间字符串格式：Y-m-d H:M:S')
